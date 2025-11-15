@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Service from "../components/Service";
+import ServicesCard from "../components/ServicesCard";
 
-function Services() {
+export default function Services() {
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      <Service />
+      <ServicesCard />
+    </>
+  );
 }
-
-export default Services

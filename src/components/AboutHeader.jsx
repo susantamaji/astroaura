@@ -6,7 +6,7 @@ export default function AboutHeader() {
 
       {/* Background Image */}
       <img
-        src="/about-bg.jpg"   // <-- change to your actual image name
+        src="https://uiparadox.co.uk/templates/astro-aura/assets/media/images/title-banner.jpg"   // <-- change to your actual image name
         alt="About Background"
         className="absolute inset-0 w-full h-full object-cover"
       />
