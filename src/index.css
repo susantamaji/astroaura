@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+/* location current */
+
+@import "leaflet/dist/leaflet.css";
