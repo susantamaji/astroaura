@@ -1,9 +1,6 @@
 import React from "react";
-import ServicesCard from './ServicesCard';
-import ServicesBlog from './ServicesBlog';
 
-
-export default function Service() {
+export default function BlogHeader() {
   return (
     <section className="w-full bg-[#0d0d0d] py-10">
       <div className="w-[95%] mx-auto rounded-[40px] overflow-hidden relative shadow-xl">
@@ -11,23 +8,21 @@ export default function Service() {
         {/* Background Image */}
         <img
           src="https://uiparadox.co.uk/templates/astro-aura/assets/media/images/title-banner.jpg"
-          alt="Services Banner"
+          alt="Blogs Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Subtle Overlay */}
+        {/* Subtle Black Overlay */}
         <div className="absolute inset-0 bg-black/30"></div>
 
         {/* Center Text */}
         <div className="relative z-10 flex items-center justify-center h-[220px] md:h-[300px]">
           <h1 className="font-serif text-white text-4xl md:text-6xl font-semibold tracking-wide">
-            Services
+            Blogs
           </h1>
         </div>
+
       </div>
-      < ServicesCard />
-      <ServicesBlog/>
     </section>
-    
   );
 }

@@ -8,8 +8,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Service from './components/Service';
-import OurExclusiveProducts from './components/OurExclusiveProducts';
-import Testimonials from './components/Testimonials';
+import OurExclusiveProducts from './pages/OurExclusiveProducts';
+import Testimonials from './pages/Testimonials';
 
 function App() {
   return (
