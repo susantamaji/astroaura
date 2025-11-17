@@ -1,9 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) =>
+    location.pathname === path ? "text-purple-400 font-semibold" : "";
+
+  const activeUnderline = (path) =>
+    location.pathname === path
+      ? "scale-x-100 bg-purple-500"
+      : "scale-x-0 group-hover:scale-x-100 bg-purple-500";
 
   return (
     <nav className="w-full bg-[#1a1a1a] py-4 fixed top-0 left-0 z-50 shadow-lg">
@@ -19,58 +28,116 @@ function Navbar() {
         <ul className="hidden md:flex items-center gap-8 text-white text-sm font-medium">
 
           <li className="relative group cursor-pointer">
-            <Link to="/">Home</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-100"></span>
+            <Link
+              to="/"
+              className={`px-2 py-1 rounded-md transition ${isActive("/")}`}
+            >
+              Home
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
+                "/"
+              )}`}
+            ></span>
           </li>
 
           <li className="relative group cursor-pointer">
-            <Link to="/about">About Us</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <Link
+              to="/about"
+              className={`px-2 py-1 rounded-md transition ${isActive("/about")}`}
+            >
+              About Us
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
+                "/about"
+              )}`}
+            ></span>
           </li>
 
           {/* Services Dropdown */}
           <li className="relative group cursor-pointer">
-            <span>Services</span>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <span className="px-2 py-1">Services</span>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left scale-x-0 group-hover:scale-x-100 bg-purple-500`}
+            ></span>
 
             {/* Dropdown */}
-            <ul className="
+            <ul
+              className="
               absolute left-0 mt-3 bg-[#222] text-white rounded-lg shadow-lg opacity-0 invisible 
               group-hover:opacity-100 group-hover:visible transition-all duration-300 
               w-40 p-2 space-y-2"
             >
-              <li className="hover:bg-[#333] rounded-md px-3 py-2 transition">
-                <Link to="/service">Services</Link>
+              <li>
+                <Link
+                  to="/service"
+                  className={`block px-3 py-2 rounded-md transition hover:bg-[#333] ${isActive(
+                    "/service"
+                  )}`}
+                >
+                  Services
+                </Link>
               </li>
-              <li className="hover:bg-[#333] rounded-md px-3 py-2 transition">
-                <Link to="/ourexclusive">OurExclusive</Link>
+              <li>
+                <Link
+                  to="/ourexclusive"
+                  className={`block px-3 py-2 rounded-md transition hover:bg-[#333] ${isActive(
+                    "/ourexclusive"
+                  )}`}
+                >
+                  OurExclusive
+                </Link>
               </li>
-              <li className="hover:bg-[#333] rounded-md px-3 py-2 transition">
-                <Link to="/testimonials">Testimonials</Link>
+              <li>
+                <Link
+                  to="/testimonials"
+                  className={`block px-3 py-2 rounded-md transition hover:bg-[#333] ${isActive(
+                    "/testimonials"
+                  )}`}
+                >
+                  Testimonials
+                </Link>
               </li>
             </ul>
           </li>
 
           <li className="relative group cursor-pointer">
-            <Link to="/blog">Blogs</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <Link
+              to="/blog"
+              className={`px-2 py-1 rounded-md transition ${isActive("/blog")}`}
+            >
+              Blogs
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
+                "/blog"
+              )}`}
+            ></span>
           </li>
 
           <li className="relative group cursor-pointer">
-            <Link to="/contact">Contact</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <Link
+              to="/contact"
+              className={`px-2 py-1 rounded-md transition ${isActive("/contact")}`}
+            >
+              Contact
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
+                "/contact"
+              )}`}
+            ></span>
           </li>
-
         </ul>
 
-        {/* Hamburger Menu (Mobile) */}
+        {/* Hamburger Menu */}
         <button
           className="md:hidden text-white text-3xl"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <HiX /> : <HiMenu />}
         </button>
-
       </div>
 
       {/* Mobile Menu */}
@@ -80,24 +147,69 @@ function Navbar() {
       >
         <ul className="flex flex-col gap-4 px-6 py-4">
 
-          <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setMobileOpen(false)}>About Us</Link>
+          <Link
+            to="/"
+            className={`py-2 rounded-md ${isActive("/")}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            Home
+          </Link>
 
-          {/* Mobile Services Dropdown */}
+          <Link
+            to="/about"
+            className={`py-2 rounded-md ${isActive("/about")}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            About Us
+          </Link>
+
           <details className="group">
             <summary className="cursor-pointer py-2">Services</summary>
             <div className="pl-4 flex flex-col gap-2 mt-2">
-              <Link to="/service" onClick={() => setMobileOpen(false)}>Services</Link>
-              <Link to="/ourexclusive" onClick={() => setMobileOpen(false)}>OurExclusive</Link>
-              <Link to="/testimonials" onClick={() => setMobileOpen(false)}>Testimonials</Link>
+
+              <Link
+                to="/service"
+                className={`py-2 rounded-md ${isActive("/service")}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                Services
+              </Link>
+
+              <Link
+                to="/ourexclusive"
+                className={`py-2 rounded-md ${isActive("/ourexclusive")}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                OurExclusive
+              </Link>
+
+              <Link
+                to="/testimonials"
+                className={`py-2 rounded-md ${isActive("/testimonials")}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                Testimonials
+              </Link>
             </div>
           </details>
 
-          <Link to="/blog" onClick={() => setMobileOpen(false)}>Blogs</Link>
-          <Link to="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+          <Link
+            to="/blog"
+            className={`py-2 rounded-md ${isActive("/blog")}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            Blogs
+          </Link>
+
+          <Link
+            to="/contact"
+            className={`py-2 rounded-md ${isActive("/contact")}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            Contact
+          </Link>
         </ul>
       </div>
-
     </nav>
   );
 }
