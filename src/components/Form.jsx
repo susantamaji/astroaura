@@ -2,22 +2,22 @@ import React from "react";
 
 export default function Form() {
   return (
-    <section className="w-full bg-[#141414] text-white py-24 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+    <section className="w-full bg-[#1a1a1a] text-white py-20 px-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT IMAGE */}
-        <div>
+        <div className="h-full flex justify-center items-center">
           <img
-            src="/formbg.jpg"  // Replace with your actual image
-            alt="Astrology Form Background"
-            className="w-full rounded-2xl object-cover shadow-lg"
+            src="../src/Assets/contact-img.jpg"
+            alt="Contact"
+            className="w-full h-[650px] object-cover rounded-3xl shadow-xl"
           />
         </div>
 
         {/* RIGHT FORM */}
-        <div>
-          <h2 className="text-5xl font-bold mb-4">Reserve A Slot</h2>
-          <p className="text-gray-300 mb-10">
+        <div className="h-full flex flex-col justify-center">
+          <h2 className="text-5xl font-bold mb-3">Reserve A Slot</h2>
+          <p className="text-gray-300 mb-10 text-lg">
             Our friendly team would love to hear from you.
           </p>
 
@@ -29,7 +29,7 @@ export default function Form() {
               <input
                 type="text"
                 placeholder="eg. John"
-                className="w-full bg-transparent border border-gray-700 px-4 py-3 rounded-md focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#111] border border-gray-700 px-4 py-3.5 rounded-lg focus:outline-none focus:border-purple-500"
               />
             </div>
 
@@ -39,17 +39,17 @@ export default function Form() {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full bg-transparent border border-gray-700 px-4 py-3 rounded-md focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#111] border border-gray-700 px-4 py-3.5 rounded-lg focus:outline-none focus:border-purple-500"
               />
             </div>
 
-            {/* CONTACT NUMBER */}
+            {/* CONTACT */}
             <div>
               <label className="block text-sm mb-2">Contact Number</label>
               <input
                 type="text"
-                placeholder="+1 (111) 111 1111"
-                className="w-full bg-transparent border border-gray-700 px-4 py-3 rounded-md focus:outline-none focus:border-purple-500"
+                placeholder="+1 (111) 111 111"
+                className="w-full bg-[#111] border border-gray-700 px-4 py-3.5 rounded-lg focus:outline-none focus:border-purple-500"
               />
             </div>
 
@@ -58,7 +58,7 @@ export default function Form() {
               <label className="block text-sm mb-2">Preferred Date</label>
               <input
                 type="date"
-                className="w-full bg-transparent border border-gray-700 px-4 py-3 rounded-md focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#111] border border-gray-700 px-4 py-3.5 rounded-lg focus:outline-none focus:border-purple-500"
               />
             </div>
 
@@ -66,19 +66,19 @@ export default function Form() {
             <div>
               <label className="block text-sm mb-2">Service</label>
               <select
-                className="w-full bg-transparent border border-gray-700 px-4 py-3 rounded-md focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#111] border border-gray-700 px-4 py-3.5 rounded-lg focus:outline-none focus:border-purple-500"
               >
-                <option className="bg-[#141414]">Tarot Reading</option>
-                <option className="bg-[#141414]">Palm Reading</option>
-                <option className="bg-[#141414]">Birth Chart Analysis</option>
-                <option className="bg-[#141414]">Relationship Guidance</option>
+                <option className="bg-[#111]">Tarot Reading</option>
+                <option className="bg-[#111]">Palm Reading</option>
+                <option className="bg-[#111]">Birth Chart Analysis</option>
+                <option className="bg-[#111]">Relationship Guidance</option>
               </select>
             </div>
 
             {/* BUTTON */}
             <button
               type="submit"
-              className="w-full bg-purple-600 hover:bg-purple-700 transition py-4 rounded-md text-white font-medium mt-4"
+              className="w-full bg-purple-600 hover:bg-purple-700 transition py-4 rounded-lg text-white font-medium text-lg mt-4"
             >
               Submit
             </button>

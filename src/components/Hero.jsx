@@ -4,7 +4,6 @@ export default function Hero() {
   return (
     <section className="w-full bg-[#141414] text-white py-24 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2  items-center">
-
         {/* LEFT CONTENT */}
         <div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight">
@@ -12,9 +11,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-300 mt-6 text-lg max-w-xl">
-            Discover how the universe shapes your life. Dive into your zodiac insights,
-            celestial forecasts, and personalized astrological guidance for a balanced 
-            and meaningful existence.
+            Discover how the universe shapes your life. Dive into your zodiac
+            insights, celestial forecasts, and personalized astrological
+            guidance for a balanced and meaningful existence.
           </p>
 
           {/* BUTTONS */}
@@ -31,10 +30,22 @@ export default function Hero() {
           {/* CLIENTS */}
           <div className="flex items-center gap-4 mt-10">
             <div className="flex -space-x-3">
-              <img src="/p1.jpg" className="w-10 h-10 rounded-full border border-white" />
-              <img src="/p2.jpg" className="w-10 h-10 rounded-full border border-white" />
-              <img src="/p3.jpg" className="w-10 h-10 rounded-full border border-white" />
-              <img src="/p4.jpg" className="w-10 h-10 rounded-full border border-white" />
+              <img
+                src="../src/Assets/student-1.png"
+                className="w-10 h-10 rounded-full border border-white"
+              />
+              <img
+                src="../src/Assets/student-2.png"
+                className="w-10 h-10 rounded-full border border-white"
+              />
+              <img
+                src="../src/Assets/student-3.png"
+                className="w-10 h-10 rounded-full border border-white"
+              />
+              <img
+                src="../src/Assets/student-4.png"
+                className="w-10 h-10 rounded-full border border-white"
+              />
             </div>
 
             <p className="text-yellow-400 font-semibold text-lg">
@@ -44,13 +55,9 @@ export default function Hero() {
         </div>
 
         {/* RIGHT IMAGE GRID */}
-        <div className="grid grid-cols-2 gap-6">
-          <img src="/astro1.png" className="w-full rounded-lg" />
-          <img src="/astro2.png" className="w-full rounded-lg" />
-          <img src="/astro3.png" className="w-full rounded-lg" />
-          <img src="/astro4.png" className="w-full rounded-lg" />
+        <div className=" w[100%]">
+          <img src="../src/Assets/hero-img.png" className="w-full rounded-lg" />
         </div>
-
       </div>
     </section>
   );

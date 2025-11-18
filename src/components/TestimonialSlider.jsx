@@ -11,7 +11,7 @@ export default function TestimonialSlider() {
         "The natal chart reading I got was truly insightful! It felt like the astrologer knew me even better than I knew myself. The guidance helped me recognize my strengths and weaknesses, and now I feel more confident in my decisions.",
       name: "Alex Jonathan",
       role: "CEO Unboxing.co",
-      img: "/t1.jpg",
+      img: "../src/Assets/testimonial-img.jpg",
       sideImg: "/starside1.jpg",
     },
     {
@@ -20,7 +20,7 @@ export default function TestimonialSlider() {
         "I was amazed at how accurate the reading was! It gave me clarity on my relationships and career choices. Definitely recommend this experience.",
       name: "Priya Sharma",
       role: "Marketing Lead",
-      img: "/t2.jpg",
+      img: "../src/Assets/testimonial-img.jpg",
       sideImg: "/starside2.jpg",
     },
     {
@@ -29,7 +29,7 @@ export default function TestimonialSlider() {
         "Absolutely transformative! I walked away feeling deeply understood and aware of my purpose. The best astrology session I've ever had.",
       name: "Daniel Cruz",
       role: "Product Designer",
-      img: "/t3.jpg",
+      img: "../src/Assets/testimonial-img.jpg",
       sideImg: "/starside3.jpg",
     },
   ];
@@ -99,7 +99,7 @@ export default function TestimonialSlider() {
         {/* RIGHT IMAGE */}
         <div>
           <img
-            src={current.sideImg}
+            src="../src/Assets/testimonial-img.jpg"
             className="w-full rounded-xl shadow-lg shadow-purple-900/20 object-cover"
           />
         </div>

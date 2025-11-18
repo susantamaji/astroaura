@@ -67,7 +67,7 @@ export default function Circle() {
 
         {/* RIGHT IMAGE */}
         <div className="flex justify-center">
-          <img src="/zodiac-circle.png" className="w-[450px] md:w-[600px]" />
+          <img src="../src/Assets/about-img-2.png" className="w-[450px] md:w-[600px]" />
         </div>
 
       </div>

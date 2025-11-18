@@ -11,7 +11,7 @@ export default function Path() {
           {/* LEFT IMAGE */}
           <div className="overflow-hidden rounded-xl">
             <img
-              src="/planets.jpg"  // 🔥 Replace with your image path
+              src="../src/Assets/discover-img.jpg"  // 🔥 Replace with your image path
               alt="cosmic path"
               className="w-full h-full object-cover rounded-xl hover:scale-105 transition duration-500"
             />
