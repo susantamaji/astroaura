@@ -23,7 +23,7 @@ export default function Circle() {
 
             {/* 1 - General Consultation */}
             <div className="flex gap-5">
-              <img src="/general.png" className="w-14 h-14" />
+              <img src="../src/Assets/cunsulation.png" className="w-14 h-14" />
 
               <div>
                 <h3 className="text-xl font-semibold mb-1">General Consultation</h3>
@@ -37,7 +37,7 @@ export default function Circle() {
 
             {/* 2 - Personal Life Advice */}
             <div className="flex gap-5">
-              <img src="/life.png" className="w-14 h-14" />
+              <img src="../src/Assets/personal-advice.png" className="w-14 h-14" />
 
               <div>
                 <h3 className="text-xl font-semibold mb-1">Personal Life Advice</h3>
@@ -51,7 +51,7 @@ export default function Circle() {
 
             {/* 3 - Work, Career & Finance */}
             <div className="flex gap-5">
-              <img src="/career.png" className="w-14 h-14" />
+              <img src="../src/Assets//career.png" className="w-14 h-14" />
 
               <div>
                 <h3 className="text-xl font-semibold mb-1">Work, Career & Finance</h3>

@@ -7,62 +7,62 @@ export default function Scope() {
     {
       name: "ARIES",
       date: "March 21 - April 19",
-      img: "/zodiac/aries.png",
+      img: "../src/Assets/aries.png",
     },
     {
       name: "TAURUS",
       date: "April 20 - May 20",
-      img: "/zodiac/taurus.png",
+      img: "../src/Assets/Taurus.png",
     },
     {
       name: "GEMINI",
       date: "May 21 - June 20",
-      img: "/zodiac/gemini.png",
+      img: "../src/Assets/gemini.png",
     },
     {
       name: "CANCER",
       date: "June 22 - July 22",
-      img: "/zodiac/cancer.png",
+      img: "../src/Assets/cancer.png",
     },
     {
       name: "LEO",
       date: "July 23 - Aug 22",
-      img: "/zodiac/leo.png",
+      img: "../src/Assets/leo.png",
     },
     {
       name: "VIRGO",
       date: "Aug 23 - Sep 22",
-      img: "/zodiac/virgo.png",
+      img: "../src/Assets/virgo.png",
     },
     {
       name: "LIBRA",
       date: "Sep 23 - Oct 22",
-      img: "/zodiac/libra.png",
+      img: "../src/Assets/libra.png",
     },
     {
       name: "SCORPIO",
       date: "Oct 23 - Nov 21",
-      img: "/zodiac/scorpio.png",
+      img: "../src/Assets/scorpio.png",
     },
     {
       name: "SAGITTARIUS",
       date: "Nov 22 - Dec 21",
-      img: "/zodiac/sagittarius.png",
+      img: "../src/Assets/sagitarius.png",
     },
     {
       name: "CAPRICORN",
       date: "Dec 22 - Jan 19",
-      img: "/zodiac/capricorn.png",
+      img: "../src/Assets/capricorn.png",
     },
     {
       name: "AQUARIUS",
       date: "Jan 20 - Feb 18",
-      img: "/zodiac/aquarius.png",
+      img: "../src/Assets/aquarius.png",
     },
     {
       name: "PISCES",
       date: "Feb 19 - Mar 20",
-      img: "/zodiac/pisces.png",
+      img: "../src/Assets/pices.png",
     },
   ];
 
