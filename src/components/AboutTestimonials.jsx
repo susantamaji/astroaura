@@ -6,21 +6,21 @@ const testimonials = [
     text: "The natal chart reading I received was incredibly enlightening! It seemed as though the astrologer understood me more deeply than I understood myself. The revelations highlighted my strengths and weaknesses, leaving me more assured about my choices.",
     name: "Sophia Rose",
     role: "CEO Unboxing.co",
-    image: "/girl1.jpg",
+    image: "../src/Assets/student-4.png",
     bg: "/abt3.jpg",
   },
   {
     text: "AstroAura provided clarity I didn’t know I needed. The insights were spot on, guiding me toward decisions that aligned with my life's purpose. Truly transformative!",
     name: "Maya Patel",
     role: "Entrepreneur",
-    image: "/girl2.jpg",
+    image: "../src/Assets/student-3.png",
     bg: "/abt4.jpg",
   },
   {
     text: "Absolutely incredible experience! I felt so seen, understood, and guided. This helped me unlock emotional clarity and confidence in my journey.",
     name: "Aarushi Sharma",
     role: "Creative Director",
-    image: "/girl3.jpg",
+    image: "../src/Assets/student-2.png",
     bg: "/abt2.jpg",
   },
 ];
@@ -90,7 +90,7 @@ export default function AboutTestimonials() {
         {/* RIGHT — IMAGE */}
         <div>
           <img
-            src={testimonials[index].bg}
+            src= "../src/Assets/testimonial-img.jpg"
             className="w-full rounded-xl shadow-lg object-cover h-[450px]"
           />
         </div>

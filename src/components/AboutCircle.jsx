@@ -9,7 +9,7 @@ export default function AboutCircle() {
         {/* LEFT IMAGE */}
         <div className="flex justify-center">
           <img
-            src="/circle.png"
+            src="../src/Assets/about-circle-img-3.png"
             alt="Astrology Wheel"
             className="w-[420px] md:w-[520px] lg:w-[600px]"
           />

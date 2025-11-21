@@ -5,7 +5,7 @@ export default function ServicesCard() {
     {
       title: "Personalized Tarot Reading",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
-      icon: "/icons/tarot.svg",
+      icon: "../src/Assets/blog-1.jpg",
       details:
         "A personalized tarot reading helps you gain clarity on love, career, and life decisions through intuitive card guidance.",
     },

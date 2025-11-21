@@ -41,22 +41,8 @@ export default function AboutCard() {
         </div>
 
         {/* RIGHT IMAGE SECTION */}
-        <div className="flex justify-center relative">
-          <img
-            src="/card1.png"
-            alt="Astrology Card"
-            className="w-[260px] md:w-[300px] rotate-[-12deg] absolute top-10 left-10"
-          />
-          <img
-            src="/card2.png"
-            alt="Astrology Card"
-            className="w-[260px] md:w-[300px] z-10"
-          />
-          <img
-            src="/card3.png"
-            alt="Astrology Card"
-            className="w-[260px] md:w-[300px] rotate-[12deg] absolute top-10 right-10"
-          />
+        <div className=" w[100%]">
+          <img src="../src/Assets/about-img.png" className="w-full rounded-lg" />
         </div>
 
       </div>

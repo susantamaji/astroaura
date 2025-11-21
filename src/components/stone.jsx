@@ -7,7 +7,7 @@ export default function Stone() {
     {
       name: "Violet Stone",
       color: "text-purple-400",
-      img: "https://images.pexels.com/photos/1769359/pexels-photo-1769359.jpeg",
+      img: "../src/Assets/vio.webp",
       desc: "A stone of peace and creativity. Violet stones amplify spiritual awareness and intuition.",
       details: `✨ **Astrological Benefits**
 - Enhances spiritual vision and psychic abilities  
@@ -19,7 +19,7 @@ export default function Stone() {
     {
       name: "Panna (Emerald)",
       color: "text-green-400",
-      img: "https://images.pexels.com/photos/918599/pexels-photo-918599.jpeg",
+      img: "../src/Assets/panna.jpg",
       desc: "Associated with Mercury, Emerald enhances wisdom, communication, and financial growth.",
       details: `✨ **Astrological Benefits**
 - Ruled by Mercury (Budh)  
@@ -31,7 +31,7 @@ export default function Stone() {
     {
       name: "Amethyst Stone",
       color: "text-purple-300",
-      img: "https://images.pexels.com/photos/1452992/pexels-photo-1452992.jpeg",
+      img: "../src/Assets/Probal.jpg",
       desc: "A calming stone ruled by Jupiter. Provides clarity, intuition, and emotional healing.",
       details: `✨ **Astrological Benefits**
 - Ruled by Jupiter (Guru)  
@@ -43,7 +43,7 @@ export default function Stone() {
     {
       name: "Red Coral (Moonga)",
       color: "text-red-400",
-      img: "https://images.pexels.com/photos/942534/pexels-photo-942534.jpeg",
+      img: "../src/Assets/Ruby.webp",
       desc: "Ruled by Mars, Red Coral boosts courage, energy, and confidence.",
       details: `✨ **Astrological Benefits**
 - Ruled by Mars (Mangal)  
@@ -55,7 +55,7 @@ export default function Stone() {
     {
       name: "Blue Sapphire (Neelam)",
       color: "text-blue-400",
-      img: "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg",
+      img: "../src/Assets/sapphire-blue-3OrFyrWp.jpg",
       desc: "Ruled by Saturn, brings fast success, discipline, and protection.",
       details: `✨ **Astrological Benefits**
 - Ruled by Saturn (Shani)  
@@ -67,7 +67,7 @@ export default function Stone() {
     {
       name: "Ruby (Manikya)",
       color: "text-red-500",
-      img: "https://images.pexels.com/photos/1153600/pexels-photo-1153600.jpeg",
+      img: "../src/Assets/Ruby.webp",
       desc: "Ruby enhances confidence, leadership, and personal power.",
       details: `✨ **Astrological Benefits**
 - Ruled by the Sun (Surya)  
