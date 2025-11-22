@@ -5,42 +5,42 @@ export default function ServicesCard() {
     {
       title: "Personalized Tarot Reading",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
-      icon: "../src/Assets/blog-1.jpg",
+      icon: "../src/Assets/aries.png",
       details:
         "A personalized tarot reading helps you gain clarity on love, career, and life decisions through intuitive card guidance.",
     },
     {
       title: "Personalized Palm Reading",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
-      icon: "/icons/palm.svg",
+      icon: "../src/Assets/Taurus.png",
       details:
         "Palmistry reveals your strengths, emotional patterns, and future possibilities through the lines and mounts on your hand.",
     },
     {
       title: "Astrological Birth Chart Analysis",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
-      icon: "/icons/star.svg",
+      icon: "../src/Assets/cancer.png",
       details:
         "A birth chart reveals personality, destiny, strengths, weaknesses, and planetary influences based on your exact birth time.",
     },
     {
       title: "Astrological Birth Chart Analysis",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
-      icon: "/icons/star.svg",
+      icon: "../src/Assets/leo.png",
       details:
         "We provide deep insight into planetary positions and how they shape your life journey, relationships, and decisions.",
     },
     {
       title: "Personalized Palm Reading",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
-      icon: "/icons/palm.svg",
+      icon: "../src/Assets/virgo.png",
       details:
         "Palm reading uncovers hidden talents, future trends, emotional health, and direction of your life path.",
     },
     {
       title: "Astrological Birth Chart Analysis",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
-      icon: "/icons/star.svg",
+      icon: "../src/Assets/libra.png",
       details:
         "Unlock the secrets of your cosmic blueprint and understand your life purpose with a deep birth chart analysis.",
     },

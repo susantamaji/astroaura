@@ -8,35 +8,35 @@ export default function ServicesSection() {
   const services = [
     {
       title: "Astrological Birth Chart Analysis",
-      img: "/service1.png",
+      img: "../src/Assets/virgo.png",
       desc: "Deep analysis of your cosmic identity based on your birth chart.",
       fullText:
         "Your birth chart reveals personality, future trends, strengths, weaknesses, and soul purpose. It's a celestial map guiding your entire life path.",
     },
     {
       title: "Personalized Tarot Reading",
-      img: "/service2.png",
+      img: "../src/Assets/libra.png",
       desc: "Tarot insights reveal clarity, direction & hidden energies.",
       fullText:
         "Tarot readings help uncover hidden emotions, pathways, future opportunities, and intuitive guidance.",
     },
     {
       title: "Personalized Palm Reading",
-      img: "/service3.png",
+      img: "../src/Assets/aries.png",
       desc: "Understand destiny, strengths & love life through palm lines.",
       fullText:
         "Palm reading reveals health, love life, emotional energy, destiny flow, career path, and spiritual alignment.",
     },
     {
       title: "Numerology Life Insights",
-      img: "/service1.png",
+      img: "../src/Assets/Taurus.png",
       desc: "Explore your life path through numbers.",
       fullText:
         "Numerology helps decode personality traits, destiny, and future events using your name and birth date.",
     },
     {
       title: "Future Prediction Session",
-      img: "/service3.png",
+      img: "../src/Assets/cancer.png",
       desc: "One-on-one session for future clarity.",
       fullText:
         "A prediction session gives you clarity about love, career, finances, and major upcoming events.",

@@ -1,9 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+import logo from "../Assets/logo.webp"
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const activePath = location.pathname;
+
+  const isServiceActive = ["/service", "/ourexclusive", "/testimonials"].includes(
+    activePath
+  );
 
   return (
     <nav className="w-full bg-[#1a1a1a] py-4 fixed top-0 left-0 z-50 shadow-lg">
@@ -11,33 +18,59 @@ function Navbar() {
 
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="logo" className="w-10 h-10" />
+          <img src={logo} alt="logo" className="w-10 h-10" />
           <h1 className="text-white text-2xl font-semibold">AstroAura</h1>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-white text-sm font-medium">
 
+          {/* Home */}
           <li className="relative group cursor-pointer">
-            <Link to="/">Home</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-100"></span>
+            <Link
+              to="/"
+              className={`${activePath === "/" ? "text-purple-400" : ""}`}
+            >
+              Home
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
+                activePath === "/" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`}
+            ></span>
           </li>
 
+          {/* About */}
           <li className="relative group cursor-pointer">
-            <Link to="/about">About Us</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <Link
+              to="/about"
+              className={`${activePath === "/about" ? "text-purple-400" : ""}`}
+            >
+              About Us
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
+                activePath === "/about" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`}
+            ></span>
           </li>
 
           {/* Services Dropdown */}
           <li className="relative group cursor-pointer">
-            <span>Services</span>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <span className={`${isServiceActive ? "text-purple-400" : ""}`}>
+              Services
+            </span>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
+                isServiceActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`}
+            ></span>
 
             {/* Dropdown */}
-            <ul className="
-              absolute left-0 mt-3 bg-[#222] text-white rounded-lg shadow-lg opacity-0 invisible 
-              group-hover:opacity-100 group-hover:visible transition-all duration-300 
-              w-40 p-2 space-y-2"
+            <ul
+              className="absolute left-0 mt-3 bg-[#222] text-white rounded-lg shadow-lg opacity-0 invisible 
+                group-hover:opacity-100 group-hover:visible transition-all duration-300 
+                w-40 p-2 space-y-2"
             >
               <li className="hover:bg-[#333] rounded-md px-3 py-2 transition">
                 <Link to="/service">Services</Link>
@@ -51,26 +84,45 @@ function Navbar() {
             </ul>
           </li>
 
+          {/* Blogs */}
           <li className="relative group cursor-pointer">
-            <Link to="/blog">Blogs</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <Link
+              to="/blog"
+              className={`${activePath === "/blog" ? "text-purple-400" : ""}`}
+            >
+              Blogs
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
+                activePath === "/blog" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`}
+            ></span>
           </li>
 
+          {/* Contact */}
           <li className="relative group cursor-pointer">
-            <Link to="/contact">Contact</Link>
-            <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+            <Link
+              to="/contact"
+              className={`${activePath === "/contact" ? "text-purple-400" : ""}`}
+            >
+              Contact
+            </Link>
+            <span
+              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
+                activePath === "/contact" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`}
+            ></span>
           </li>
 
         </ul>
 
-        {/* Hamburger Menu (Mobile) */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white text-3xl"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <HiX /> : <HiMenu />}
         </button>
-
       </div>
 
       {/* Mobile Menu */}
@@ -80,24 +132,77 @@ function Navbar() {
       >
         <ul className="flex flex-col gap-4 px-6 py-4">
 
-          <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setMobileOpen(false)}>About Us</Link>
+          <Link
+            to="/"
+            className={`${activePath === "/" ? "text-purple-400" : ""}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            Home
+          </Link>
 
-          {/* Mobile Services Dropdown */}
+          <Link
+            to="/about"
+            className={`${activePath === "/about" ? "text-purple-400" : ""}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            About Us
+          </Link>
+
+          {/* Mobile Dropdown */}
           <details className="group">
-            <summary className="cursor-pointer py-2">Services</summary>
+            <summary
+              className={`cursor-pointer py-2 ${
+                isServiceActive ? "text-purple-400" : ""
+              }`}
+            >
+              Services
+            </summary>
+
             <div className="pl-4 flex flex-col gap-2 mt-2">
-              <Link to="/service" onClick={() => setMobileOpen(false)}>Services</Link>
-              <Link to="/ourexclusive" onClick={() => setMobileOpen(false)}>OurExclusive</Link>
-              <Link to="/testimonials" onClick={() => setMobileOpen(false)}>Testimonials</Link>
+              <Link
+                to="/service"
+                className={`${activePath === "/service" ? "text-purple-400" : ""}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                Services
+              </Link>
+
+              <Link
+                to="/ourexclusive"
+                className={`${activePath === "/ourexclusive" ? "text-purple-400" : ""}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                OurExclusive
+              </Link>
+
+              <Link
+                to="/testimonials"
+                className={`${activePath === "/testimonials" ? "text-purple-400" : ""}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                Testimonials
+              </Link>
             </div>
           </details>
 
-          <Link to="/blog" onClick={() => setMobileOpen(false)}>Blogs</Link>
-          <Link to="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+          <Link
+            to="/blog"
+            className={`${activePath === "/blog" ? "text-purple-400" : ""}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            Blogs
+          </Link>
+
+          <Link
+            to="/contact"
+            className={`${activePath === "/contact" ? "text-purple-400" : ""}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            Contact
+          </Link>
+
         </ul>
       </div>
-
     </nav>
   );
 }

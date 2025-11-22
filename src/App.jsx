@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Service from './components/Service';
 import OurExclusiveProducts from './pages/OurExclusiveProducts';
 import Testimonials from './pages/Testimonials';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/service" element={<Service />} />
           <Route path="/ourexclusive" element={<OurExclusiveProducts />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
 

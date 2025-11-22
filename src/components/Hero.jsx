@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -22,9 +23,9 @@ export default function Hero() {
               Get Started →
             </button>
 
-            <button className="border border-gray-300 px-8 py-3 rounded-md hover:bg-white hover:text-black transition font-medium cursor-pointer">
+           <NavLink to={"/contact"}> <button className="border border-gray-300 px-8 py-3 rounded-md hover:bg-white hover:text-black transition font-medium cursor-pointer">
               Contact Us
-            </button>
+            </button> </NavLink>
           </div>
 
           {/* CLIENTS */}

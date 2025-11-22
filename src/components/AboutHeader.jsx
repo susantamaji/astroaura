@@ -12,7 +12,7 @@ export default function AboutHeader() {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0bg-opacity-60"></div>
 
       {/* Centered Text */}
       <div className="relative z-10 flex items-center justify-center h-full">

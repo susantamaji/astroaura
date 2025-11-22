@@ -12,7 +12,7 @@ export default function TaglineTestimonials() {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      {/* <div className="absolute inset-0 bg-gray-700 bg-opacity-60"></div> */}
 
       {/* Content */}
       <div className="relative z-10 w-[90%] md:w-[80%] mx-auto h-full flex flex-col justify-center">
