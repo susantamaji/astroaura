@@ -1,5 +1,11 @@
 import React from "react";
 
+// Import all images correctly
+import consultation from "../Assets/cunsulation.png";
+import personalAdvice from "../Assets/personal-advice.png";
+import career from "../Assets/career.png";
+import aboutImg2 from "../Assets/about-img-2.png";
+
 export default function Circle() {
   return (
     <section className="w-full bg-[#141414] text-white py-24 px-6">
@@ -23,7 +29,7 @@ export default function Circle() {
 
             {/* 1 - General Consultation */}
             <div className="flex gap-5">
-              <img src="../src/Assets/cunsulation.png" className="w-14 h-14" />
+              <img src={consultation} className="w-14 h-14" />
 
               <div>
                 <h3 className="text-xl font-semibold mb-1">General Consultation</h3>
@@ -37,7 +43,7 @@ export default function Circle() {
 
             {/* 2 - Personal Life Advice */}
             <div className="flex gap-5">
-              <img src="../src/Assets/personal-advice.png" className="w-14 h-14" />
+              <img src={personalAdvice} className="w-14 h-14" />
 
               <div>
                 <h3 className="text-xl font-semibold mb-1">Personal Life Advice</h3>
@@ -51,7 +57,7 @@ export default function Circle() {
 
             {/* 3 - Work, Career & Finance */}
             <div className="flex gap-5">
-              <img src="../src/Assets//career.png" className="w-14 h-14" />
+              <img src={career} className="w-14 h-14" />
 
               <div>
                 <h3 className="text-xl font-semibold mb-1">Work, Career & Finance</h3>
@@ -67,7 +73,7 @@ export default function Circle() {
 
         {/* RIGHT IMAGE */}
         <div className="flex justify-center">
-          <img src="../src/Assets/about-img-2.png" className="w-[450px] md:w-[600px]" />
+          <img src={aboutImg2} className="w-[450px] md:w-[600px]" />
         </div>
 
       </div>

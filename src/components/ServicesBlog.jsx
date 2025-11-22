@@ -1,5 +1,16 @@
 import React, { useState } from "react";
 
+// Import blog images correctly
+import blog1 from "../Assets/blog-1.jpg";
+import blog2 from "../Assets/blog-2.jpg";
+import blog3 from "../Assets/blog-3.jpg";
+import blog4 from "../Assets/blog-4.jpg";
+import blog5 from "../Assets/blog-5.jpg";
+import blog6 from "../Assets/blog-6.jpg";
+import blog7 from "../Assets/blog-7.jpg";
+import blog8 from "../Assets/blog-8.jpg";
+import blog9 from "../Assets/blog-9.jpg";
+
 export default function BlogList() {
   const blogs = [
     {
@@ -7,80 +18,77 @@ export default function BlogList() {
       date: "June 03, 2025",
       title: "Cosmic Insight Chronicles",
       desc: "Aries individuals are known for their energetic and assertive nature, making bold and dynamic outfits a perfect match.",
-      img: "../src/Assets/blog-1.jpg",
+      img: blog1,
     },
     {
       id: 2,
       date: "June 03, 2025",
       title: "Self-Growth with Astrology",
       desc: "Incorporate astrology into everyday activities, from planning your day around the moon phase to using planetary.",
-      img: "../src/Assets/blog-2.jpg",
+      img: blog2,
     },
     {
       id: 3,
       date: "June 01, 2025",
       title: "Personal Palm Reading",
       desc: "Lectus nisi quam tellus in eu elementum. Tempus lorem arcu quis diam at. Massa lacus at morbi vel curabitur sed vitae.",
-      img: "../src/Assets/blog-3.jpg",
+      img: blog3,
     },
     {
       id: 4,
       date: "June 05, 2025",
       title: "Zodiac Energy Forecast",
       desc: "Discover how today’s cosmic energy influences your mood, intentions, and actions.",
-      img: "../src/Assets/blog-4.jpg",
+      img: blog4,
     },
     {
       id: 5,
       date: "June 06, 2025",
       title: "Love Compatibility Guide",
       desc: "See which zodiac signs match your romantic energy and which ones challenge you.",
-      img: "../src/Assets/blog-5.jpg",
+      img: blog5,
     },
     {
       id: 6,
       date: "June 08, 2025",
       title: "Moon Phase Rituals",
       desc: "Unlock the power of moon phases through rituals for peace, clarity, and manifestation.",
-      img: "../src/Assets/blog-6.jpg",
+      img: blog6,
     },
     {
-      id: 6,
+      id: 7,
       date: "June 08, 2025",
-      title: "Moon Phase Rituals",
-      desc: "Unlock the power of moon phases through rituals for peace, clarity, and manifestation.",
-      img: "../src/Assets/blog-7.jpg",
+      title: "Moon Magic Explained",
+      desc: "A deeper exploration into how moon cycles affect your emotional and spiritual balance.",
+      img: blog7,
     },
     {
-      id: 6,
+      id: 8,
       date: "June 08, 2025",
-      title: "Moon Phase Rituals",
-      desc: "Unlock the power of moon phases through rituals for peace, clarity, and manifestation.",
-      img: "../src/Assets/blog-8.jpg",
+      title: "Manifestation with Moon",
+      desc: "Learn how to harness moon phases to manifest your dreams with intention.",
+      img: blog8,
     },
     {
-      id: 6,
+      id: 9,
       date: "June 08, 2025",
-      title: "Moon Phase Rituals",
-      desc: "Unlock the power of moon phases through rituals for peace, clarity, and manifestation.",
-      img: "../src/Assets/blog-9.jpg",
+      title: "Spiritual Awakening Signs",
+      desc: "Recognize when the universe is guiding you toward spiritual transformation.",
+      img: blog9,
     },
   ];
 
-  // ---------- STATES ----------
   const [currentPage, setCurrentPage] = useState(1);
   const [viewAll, setViewAll] = useState(false);
 
   const postsPerPage = 3;
 
-  // ---------- PAGINATION LOGIC ----------
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = blogs.slice(firstPostIndex, lastPostIndex);
 
   const totalPages = Math.ceil(blogs.length / postsPerPage);
 
-  // ---------- TOGGLE VIEW ALL ----------
   const displayedBlogs = viewAll ? blogs : currentPosts;
 
   return (
@@ -100,7 +108,7 @@ export default function BlogList() {
         </div>
 
         {/* GRID */}
-        <div className={`grid gap-12 ${viewAll ? "md:grid-cols-3" : "md:grid-cols-3"}`}>
+        <div className="grid gap-12 md:grid-cols-3">
           {displayedBlogs.map((blog) => (
             <div key={blog.id} className="group">
               <img
@@ -116,14 +124,14 @@ export default function BlogList() {
                 {blog.desc}
               </p>
 
-              <a className="text-purple-400 hover:underline cursor-pointer">
+              <span className="text-purple-400 hover:underline cursor-pointer">
                 See Details
-              </a>
+              </span>
             </div>
           ))}
         </div>
 
-        {/* PAGINATION — ONLY IF NOT VIEW ALL */}
+        {/* PAGINATION */}
         {!viewAll && (
           <div className="flex justify-center gap-4 mt-16">
 
@@ -132,7 +140,8 @@ export default function BlogList() {
               disabled={currentPage === 1}
               onClick={() => setCurrentPage((p) => p - 1)}
               className={`px-4 py-2 rounded-md border border-gray-400 
-            ${currentPage === 1 ? "opacity-30 cursor-not-allowed" : "hover:bg-white hover:text-black"} `}
+                ${currentPage === 1 ? "opacity-30 cursor-not-allowed" : "hover:bg-white hover:text-black"}
+              `}
             >
               ‹
             </button>
@@ -157,7 +166,8 @@ export default function BlogList() {
               disabled={currentPage === totalPages}
               onClick={() => setCurrentPage((p) => p + 1)}
               className={`px-4 py-2 rounded-md border border-gray-400 
-            ${currentPage === totalPages ? "opacity-30 cursor-not-allowed" : "hover:bg-white hover:text-black"} `}
+                ${currentPage === totalPages ? "opacity-30 cursor-not-allowed" : "hover:bg-white hover:text-black"}
+              `}
             >
               ›
             </button>

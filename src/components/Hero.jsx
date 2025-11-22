@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import img from ".././Assets/hero-img.png"
+import img from ".././Assets/hero-img.png";
+import student1 from "../Assets/student-1.png";
+import student2 from "../Assets/student-2.png";
+import student3 from "../Assets/student-3.png";
+import student4 from "../Assets/student-4.png";
 
 export default function Hero() {
   return (
@@ -33,19 +37,19 @@ export default function Hero() {
           <div className="flex items-center gap-4 mt-10">
             <div className="flex -space-x-3">
               <img
-                src="../src/Assets/student-1.png"
+                src={student1}
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="../src/Assets/student-2.png"
+                src={student2}
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="../src/Assets/student-3.png"
+                src={student3}
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="../src/Assets/student-4.png"
+                src={student4}
                 className="w-10 h-10 rounded-full border border-white"
               />
             </div>

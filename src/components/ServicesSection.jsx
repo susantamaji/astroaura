@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Import images correctly
+import virgo from "../Assets/virgo.png";
+import libra from "../Assets/libra.png";
+import aries from "../Assets/aries.png";
+import taurus from "../Assets/Taurus.png";
+import cancer from "../Assets/cancer.png";
+
 export default function ServicesSection() {
   const [selectedService, setSelectedService] = useState(null);
   const [showAll, setShowAll] = useState(false);
@@ -8,35 +15,35 @@ export default function ServicesSection() {
   const services = [
     {
       title: "Astrological Birth Chart Analysis",
-      img: "../src/Assets/virgo.png",
+      img: virgo,  // FIXED
       desc: "Deep analysis of your cosmic identity based on your birth chart.",
       fullText:
         "Your birth chart reveals personality, future trends, strengths, weaknesses, and soul purpose. It's a celestial map guiding your entire life path.",
     },
     {
       title: "Personalized Tarot Reading",
-      img: "../src/Assets/libra.png",
+      img: libra,
       desc: "Tarot insights reveal clarity, direction & hidden energies.",
       fullText:
         "Tarot readings help uncover hidden emotions, pathways, future opportunities, and intuitive guidance.",
     },
     {
       title: "Personalized Palm Reading",
-      img: "../src/Assets/aries.png",
+      img: aries,
       desc: "Understand destiny, strengths & love life through palm lines.",
       fullText:
         "Palm reading reveals health, love life, emotional energy, destiny flow, career path, and spiritual alignment.",
     },
     {
       title: "Numerology Life Insights",
-      img: "../src/Assets/Taurus.png",
+      img: taurus,
       desc: "Explore your life path through numbers.",
       fullText:
         "Numerology helps decode personality traits, destiny, and future events using your name and birth date.",
     },
     {
       title: "Future Prediction Session",
-      img: "../src/Assets/cancer.png",
+      img: cancer,
       desc: "One-on-one session for future clarity.",
       fullText:
         "A prediction session gives you clarity about love, career, finances, and major upcoming events.",
@@ -97,7 +104,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* SEE DETAILS POPUP */}
+        {/* POPUP */}
         <AnimatePresence>
           {selectedService && (
             <motion.div

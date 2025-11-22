@@ -1,9 +1,17 @@
 import React from "react";
 
+// IMPORT ALL IMAGES (replace with your real filenames)
+import user1 from "../Assets/user1.jpg";
+import user2 from "../Assets/user2.jpg";
+import user3 from "../Assets/user3.jpg";
+import user4 from "../Assets/user4.jpg";
+import user5 from "../Assets/user5.jpg";
+import user6 from "../Assets/user6.jpg";
+
 export default function Feedback() {
   const feedbacks = [
     {
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
+      img: user1,
       name: "John Smith",
       role: "Client",
       comment:
@@ -12,7 +20,7 @@ export default function Feedback() {
         "⭐ Recommended Stone: Emerald — For clarity, communication & balanced energy.",
     },
     {
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      img: user2,
       name: "Miley Cyrus",
       role: "Supervisor",
       comment:
@@ -21,7 +29,7 @@ export default function Feedback() {
         "⭐ Suggested Planet Study: Jupiter — For wisdom, growth & spiritual expansion.",
     },
     {
-      img: "https://randomuser.me/api/portraits/men/17.jpg",
+      img: user3,
       name: "Thomas Walter",
       role: "Customer",
       comment:
@@ -30,7 +38,7 @@ export default function Feedback() {
         "⭐ Birth Chart Insight: Saturn alignment improving discipline & focus.",
     },
     {
-      img: "https://randomuser.me/api/portraits/men/11.jpg",
+      img: user4,
       name: "William Watt",
       role: "Client",
       comment:
@@ -39,7 +47,7 @@ export default function Feedback() {
         "⭐ Recommended Stone: Amethyst — For mental peace & emotional grounding.",
     },
     {
-      img: "https://randomuser.me/api/portraits/men/70.jpg",
+      img: user5,
       name: "James Scott",
       role: "Supervisor",
       comment:
@@ -48,7 +56,7 @@ export default function Feedback() {
         "⭐ Astrological Focus: Mars remedy strengthening confidence & action.",
     },
     {
-      img: "https://randomuser.me/api/portraits/women/68.jpg",
+      img: user6,
       name: "Sally Watson",
       role: "Customer",
       comment:
@@ -69,29 +77,24 @@ export default function Feedback() {
             hover:shadow-purple-500/30 hover:-translate-y-2 hover:scale-[1.02]
             transition-all duration-300 cursor-pointer border border-[#1b1b1b]"
           >
-            {/* Top Section */}
             <div className="flex items-center gap-4">
               <img
                 src={item.img}
                 alt={item.name}
                 className="w-16 h-16 rounded-full object-cover"
               />
-
               <div>
                 <h2 className="text-white text-xl font-semibold">{item.name}</h2>
                 <p className="text-blue-400 text-sm">{item.role}</p>
               </div>
             </div>
 
-            {/* Comment */}
             <p className="text-gray-300 mt-5 leading-relaxed">{item.comment}</p>
 
-            {/* Astrology Details */}
             <p className="text-purple-400 text-sm mt-3 italic">
               {item.astrology}
             </p>
 
-            {/* Stars */}
             <div className="flex items-center gap-1 mt-5 text-yellow-400 text-xl">
               ⭐⭐⭐⭐⭐ <span className="text-white text-sm ml-2">5.0</span>
             </div>

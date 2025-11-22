@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import ceo from "../Assets/testimonial-img.jpg";
+import Lead from "../Assets/student-1.png";
+import Product from "../Assets/student-2.png";
+import test from "../Assets/testimonial-img.jpg";
 
 export default function TestimonialSlider() {
   const [active, setActive] = useState(0);
@@ -11,7 +15,7 @@ export default function TestimonialSlider() {
         "The natal chart reading I got was truly insightful! It felt like the astrologer knew me even better than I knew myself. The guidance helped me recognize my strengths and weaknesses, and now I feel more confident in my decisions.",
       name: "Alex Jonathan",
       role: "CEO Unboxing.co",
-      img: "../src/Assets/testimonial-img.jpg",
+      img: ceo,
       sideImg: "/starside1.jpg",
     },
     {
@@ -20,7 +24,7 @@ export default function TestimonialSlider() {
         "I was amazed at how accurate the reading was! It gave me clarity on my relationships and career choices. Definitely recommend this experience.",
       name: "Priya Sharma",
       role: "Marketing Lead",
-      img: "../src/Assets/testimonial-img.jpg",
+      img: Lead,
       sideImg: "/starside2.jpg",
     },
     {
@@ -29,7 +33,7 @@ export default function TestimonialSlider() {
         "Absolutely transformative! I walked away feeling deeply understood and aware of my purpose. The best astrology session I've ever had.",
       name: "Daniel Cruz",
       role: "Product Designer",
-      img: "../src/Assets/testimonial-img.jpg",
+      img: Product,
       sideImg: "/starside3.jpg",
     },
   ];
@@ -99,7 +103,7 @@ export default function TestimonialSlider() {
         {/* RIGHT IMAGE */}
         <div>
           <img
-            src="../src/Assets/testimonial-img.jpg"
+            src={test}
             className="w-full rounded-xl shadow-lg shadow-purple-900/20 object-cover"
           />
         </div>

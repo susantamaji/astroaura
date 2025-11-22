@@ -1,6 +1,9 @@
 import React from "react";
 import { FaUsers, FaLightbulb, FaBriefcase } from "react-icons/fa";
 
+// Import image properly
+import aboutCircleImg from "../Assets/about-circle-img-3.png";
+
 export default function AboutCircle() {
   return (
     <section className="w-full bg-[#111] text-white py-20 px-6 md:px-16 lg:px-24">
@@ -9,7 +12,7 @@ export default function AboutCircle() {
         {/* LEFT IMAGE */}
         <div className="flex justify-center">
           <img
-            src="../src/Assets/about-circle-img-3.png"
+            src={aboutCircleImg}
             alt="Astrology Wheel"
             className="w-[420px] md:w-[520px] lg:w-[600px]"
           />
