@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import img from ".././Assets/hero-img.png"
 
 export default function Hero() {
   return (
@@ -57,7 +58,7 @@ export default function Hero() {
 
         {/* RIGHT IMAGE GRID */}
         <div className=" w[100%]">
-          <img src="../src/Assets/hero-img.png" className="w-full rounded-lg" />
+          <img src={img} className="w-full rounded-lg" />
         </div>
       </div>
     </section>
