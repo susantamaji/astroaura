@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import logo from "../Assets/logo.webp"
+import logo from "../Assets/logo.webp";
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-<<<<<<< HEAD
 
   const isActive = (path) =>
     location.pathname === path ? "text-purple-400 font-semibold" : "";
@@ -15,13 +14,12 @@ function Navbar() {
     location.pathname === path
       ? "scale-x-100 bg-purple-500"
       : "scale-x-0 group-hover:scale-x-100 bg-purple-500";
-=======
+
   const activePath = location.pathname;
 
   const isServiceActive = ["/service", "/ourexclusive", "/testimonials"].includes(
     activePath
   );
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
 
   return (
     <nav className="w-full bg-[#1a1a1a] py-4 fixed top-0 left-0 z-50 shadow-lg">
@@ -40,24 +38,14 @@ function Navbar() {
           <li className="relative group cursor-pointer">
             <Link
               to="/"
-<<<<<<< HEAD
               className={`px-2 py-1 rounded-md transition ${isActive("/")}`}
-=======
-              className={`${activePath === "/" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             >
               Home
             </Link>
             <span
-<<<<<<< HEAD
               className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
                 "/"
               )}`}
-=======
-              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
-                activePath === "/" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-              }`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             ></span>
           </li>
 
@@ -65,34 +53,19 @@ function Navbar() {
           <li className="relative group cursor-pointer">
             <Link
               to="/about"
-<<<<<<< HEAD
               className={`px-2 py-1 rounded-md transition ${isActive("/about")}`}
-=======
-              className={`${activePath === "/about" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             >
               About Us
             </Link>
             <span
-<<<<<<< HEAD
               className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
                 "/about"
               )}`}
-=======
-              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
-                activePath === "/about" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-              }`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             ></span>
           </li>
 
           {/* Services Dropdown */}
           <li className="relative group cursor-pointer">
-<<<<<<< HEAD
-            <span className="px-2 py-1">Services</span>
-            <span
-              className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left scale-x-0 group-hover:scale-x-100 bg-purple-500`}
-=======
             <span className={`${isServiceActive ? "text-purple-400" : ""}`}>
               Services
             </span>
@@ -100,21 +73,13 @@ function Navbar() {
               className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
                 isServiceActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
               }`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             ></span>
 
             {/* Dropdown */}
             <ul
-<<<<<<< HEAD
-              className="
-              absolute left-0 mt-3 bg-[#222] text-white rounded-lg shadow-lg opacity-0 invisible 
-              group-hover:opacity-100 group-hover:visible transition-all duration-300 
-              w-40 p-2 space-y-2"
-=======
               className="absolute left-0 mt-3 bg-[#222] text-white rounded-lg shadow-lg opacity-0 invisible 
                 group-hover:opacity-100 group-hover:visible transition-all duration-300 
                 w-40 p-2 space-y-2"
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             >
               <li>
                 <Link
@@ -153,24 +118,14 @@ function Navbar() {
           <li className="relative group cursor-pointer">
             <Link
               to="/blog"
-<<<<<<< HEAD
               className={`px-2 py-1 rounded-md transition ${isActive("/blog")}`}
-=======
-              className={`${activePath === "/blog" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             >
               Blogs
             </Link>
             <span
-<<<<<<< HEAD
               className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
                 "/blog"
               )}`}
-=======
-              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
-                activePath === "/blog" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-              }`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             ></span>
           </li>
 
@@ -178,33 +133,19 @@ function Navbar() {
           <li className="relative group cursor-pointer">
             <Link
               to="/contact"
-<<<<<<< HEAD
               className={`px-2 py-1 rounded-md transition ${isActive("/contact")}`}
-=======
-              className={`${activePath === "/contact" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             >
               Contact
             </Link>
             <span
-<<<<<<< HEAD
               className={`absolute left-0 -bottom-1 h-0.5 w-full transition origin-left ${activeUnderline(
                 "/contact"
               )}`}
-=======
-              className={`absolute left-0 -bottom-1 h-0.5 w-full bg-purple-500 transition origin-left ${
-                activePath === "/contact" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-              }`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             ></span>
           </li>
         </ul>
 
-<<<<<<< HEAD
-        {/* Hamburger Menu */}
-=======
         {/* Mobile Menu Button */}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
         <button
           className="md:hidden text-white text-3xl"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -222,16 +163,11 @@ function Navbar() {
 
           <Link
             to="/"
-<<<<<<< HEAD
             className={`py-2 rounded-md ${isActive("/")}`}
-=======
-            className={`${activePath === "/" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             onClick={() => setMobileOpen(false)}
           >
             Home
           </Link>
-<<<<<<< HEAD
 
           <Link
             to="/about"
@@ -241,18 +177,7 @@ function Navbar() {
             About Us
           </Link>
 
-=======
-
-          <Link
-            to="/about"
-            className={`${activePath === "/about" ? "text-purple-400" : ""}`}
-            onClick={() => setMobileOpen(false)}
-          >
-            About Us
-          </Link>
-
           {/* Mobile Dropdown */}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
           <details className="group">
             <summary
               className={`cursor-pointer py-2 ${
@@ -263,16 +188,9 @@ function Navbar() {
             </summary>
 
             <div className="pl-4 flex flex-col gap-2 mt-2">
-<<<<<<< HEAD
-
               <Link
                 to="/service"
                 className={`py-2 rounded-md ${isActive("/service")}`}
-=======
-              <Link
-                to="/service"
-                className={`${activePath === "/service" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
                 onClick={() => setMobileOpen(false)}
               >
                 Services
@@ -280,11 +198,7 @@ function Navbar() {
 
               <Link
                 to="/ourexclusive"
-<<<<<<< HEAD
                 className={`py-2 rounded-md ${isActive("/ourexclusive")}`}
-=======
-                className={`${activePath === "/ourexclusive" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
                 onClick={() => setMobileOpen(false)}
               >
                 OurExclusive
@@ -292,11 +206,7 @@ function Navbar() {
 
               <Link
                 to="/testimonials"
-<<<<<<< HEAD
                 className={`py-2 rounded-md ${isActive("/testimonials")}`}
-=======
-                className={`${activePath === "/testimonials" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
                 onClick={() => setMobileOpen(false)}
               >
                 Testimonials
@@ -306,11 +216,7 @@ function Navbar() {
 
           <Link
             to="/blog"
-<<<<<<< HEAD
             className={`py-2 rounded-md ${isActive("/blog")}`}
-=======
-            className={`${activePath === "/blog" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             onClick={() => setMobileOpen(false)}
           >
             Blogs
@@ -318,19 +224,11 @@ function Navbar() {
 
           <Link
             to="/contact"
-<<<<<<< HEAD
             className={`py-2 rounded-md ${isActive("/contact")}`}
-=======
-            className={`${activePath === "/contact" ? "text-purple-400" : ""}`}
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
             onClick={() => setMobileOpen(false)}
           >
             Contact
           </Link>
-<<<<<<< HEAD
-=======
-
->>>>>>> 114e18dd342971389c35875bd9b9cc5fe4915713
         </ul>
       </div>
     </nav>
