@@ -1,5 +1,8 @@
 import React from "react";
 
+// Import your gemstone banner image
+import gemBanner from "../Assets/gem-banner.jpg";
+
 export default function Gem() {
   return (
     <div className="w-full bg-[#0d0d0d]">
@@ -8,7 +11,7 @@ export default function Gem() {
       <section className="relative w-full h-[55vh] md:h-[70vh] overflow-hidden">
 
         <img
-          src="https://i.ytimg.com/vi/1shwDSCy7VY/maxresdefault.jpg"
+          src={gemBanner}
           alt="Gemstone Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -28,7 +31,7 @@ export default function Gem() {
         </div>
       </section>
 
-      {/* GEMSTONE CONTENT (Dark Theme) */}
+      {/* GEMSTONE CONTENT */}
       <section className="w-full bg-[#0d0d0d] text-center py-16 px-6 md:px-20">
 
         <h2 className="text-white font-serif text-3xl md:text-5xl font-bold uppercase mb-6">

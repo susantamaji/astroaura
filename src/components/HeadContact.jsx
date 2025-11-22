@@ -1,4 +1,5 @@
 import React from "react";
+import bgImage from "../Assets/contact-bg.jpg";   // ⭐ Proper React image import
 
 export default function Contact() {
   return (
@@ -9,8 +10,7 @@ export default function Contact() {
         <div
           className="w-full max-w-[95%] md:max-w-[90%] mx-auto rounded-2xl h-[350px] md:h-[420px] bg-cover bg-center flex items-center justify-center"
           style={{
-            backgroundImage:
-              `url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1500&q=80')`,
+            backgroundImage: `url(${bgImage})`,   // ⭐ using imported image
           }}
         >
           <h1 className="text-white text-4xl md:text-6xl font-serif font-bold drop-shadow-lg">

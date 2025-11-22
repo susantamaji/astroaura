@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 
+// IMPORT IMAGES PROPERLY
+import vioStone from "../Assets/vio.webp";
+import pannaStone from "../Assets/panna.jpg";
+import amethystStone from "../Assets/Probal.jpg";
+import coralStone from "../Assets/Ruby.webp";
+import sapphireStone from "../Assets/sapphire-blue-3OrFyrWp.jpg";
+import rubyStone from "../Assets/Ruby.webp";
+
 export default function Stone() {
   const [selectedStone, setSelectedStone] = useState(null);
 
@@ -7,7 +15,7 @@ export default function Stone() {
     {
       name: "Violet Stone",
       color: "text-purple-400",
-      img: "../src/Assets/vio.webp",
+      img: vioStone,
       desc: "A stone of peace and creativity. Violet stones amplify spiritual awareness and intuition.",
       details: `✨ **Astrological Benefits**
 - Enhances spiritual vision and psychic abilities  
@@ -19,7 +27,7 @@ export default function Stone() {
     {
       name: "Panna (Emerald)",
       color: "text-green-400",
-      img: "../src/Assets/panna.jpg",
+      img: pannaStone,
       desc: "Associated with Mercury, Emerald enhances wisdom, communication, and financial growth.",
       details: `✨ **Astrological Benefits**
 - Ruled by Mercury (Budh)  
@@ -31,7 +39,7 @@ export default function Stone() {
     {
       name: "Amethyst Stone",
       color: "text-purple-300",
-      img: "../src/Assets/Probal.jpg",
+      img: amethystStone,
       desc: "A calming stone ruled by Jupiter. Provides clarity, intuition, and emotional healing.",
       details: `✨ **Astrological Benefits**
 - Ruled by Jupiter (Guru)  
@@ -43,7 +51,7 @@ export default function Stone() {
     {
       name: "Red Coral (Moonga)",
       color: "text-red-400",
-      img: "../src/Assets/Ruby.webp",
+      img: coralStone,
       desc: "Ruled by Mars, Red Coral boosts courage, energy, and confidence.",
       details: `✨ **Astrological Benefits**
 - Ruled by Mars (Mangal)  
@@ -55,7 +63,7 @@ export default function Stone() {
     {
       name: "Blue Sapphire (Neelam)",
       color: "text-blue-400",
-      img: "../src/Assets/sapphire-blue-3OrFyrWp.jpg",
+      img: sapphireStone,
       desc: "Ruled by Saturn, brings fast success, discipline, and protection.",
       details: `✨ **Astrological Benefits**
 - Ruled by Saturn (Shani)  
@@ -67,7 +75,7 @@ export default function Stone() {
     {
       name: "Ruby (Manikya)",
       color: "text-red-500",
-      img: "../src/Assets/Ruby.webp",
+      img: rubyStone,
       desc: "Ruby enhances confidence, leadership, and personal power.",
       details: `✨ **Astrological Benefits**
 - Ruled by the Sun (Surya)  
@@ -81,7 +89,6 @@ export default function Stone() {
   return (
     <section className="w-full bg-[#0D0D0D] py-16">
       <div className="w-[95%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-
         {stones.map((item, i) => (
           <div
             key={i}
@@ -101,9 +108,7 @@ export default function Stone() {
                 {item.name}
               </h2>
 
-              <p className="text-gray-300 leading-relaxed mb-4">
-                {item.desc}
-              </p>
+              <p className="text-gray-300 leading-relaxed mb-4">{item.desc}</p>
 
               <button
                 onClick={() => setSelectedStone(item)}
@@ -114,15 +119,15 @@ export default function Stone() {
             </div>
           </div>
         ))}
-
       </div>
 
       {/* MODAL */}
       {selectedStone && (
         <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 px-4">
           <div className="bg-[#111] text-white max-w-lg w-full rounded-2xl p-6 shadow-xl border border-purple-500/30">
-
-            <h2 className="text-3xl font-bold mb-4">{selectedStone.name}</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              {selectedStone.name}
+            </h2>
 
             <img
               src={selectedStone.img}
@@ -144,7 +149,6 @@ export default function Stone() {
           </div>
         </div>
       )}
-
     </section>
   );
 }

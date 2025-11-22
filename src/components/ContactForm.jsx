@@ -1,4 +1,5 @@
 import React from "react";
+import contactImg from "../Assets/contact-bgg.jpg";  // ✅ Proper React import
 
 export default function ContactForm() {
   return (
@@ -8,7 +9,7 @@ export default function ContactForm() {
         {/* LEFT SIDE IMAGE */}
         <div className="w-full h-full">
           <img
-            src="https://img.freepik.com/free-vector/gradient-astronaut-background_23-2148968040.jpg"
+            src={contactImg}                      // ✅ Using imported image
             alt="Astrology"
             className="w-full h-full object-cover rounded-2xl"
           />
@@ -30,7 +31,8 @@ export default function ContactForm() {
               <input
                 type="text"
                 placeholder="eg. John"
-                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg 
+                focus:outline-none focus:border-purple-500"
               />
             </div>
 
@@ -40,7 +42,8 @@ export default function ContactForm() {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg 
+                focus:outline-none focus:border-purple-500"
               />
             </div>
 
@@ -50,7 +53,8 @@ export default function ContactForm() {
               <input
                 type="text"
                 placeholder="+1 (111) 111 1111"
-                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg 
+                focus:outline-none focus:border-purple-500"
               />
             </div>
 
@@ -60,16 +64,14 @@ export default function ContactForm() {
               <textarea
                 rows="6"
                 placeholder="Write your message..."
-                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg resize-none focus:outline-none focus:border-purple-500"
+                className="w-full bg-[#0D0D0D] border border-gray-700 px-4 py-3 rounded-lg 
+                resize-none focus:outline-none focus:border-purple-500"
               ></textarea>
             </div>
 
             {/* Checkbox */}
             <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                className="mt-1 w-4 h-4 accent-purple-600"
-              />
+              <input type="checkbox" className="mt-1 w-4 h-4 accent-purple-600" />
               <p className="text-gray-300 text-sm">
                 You agree to our friendly privacy policy.
               </p>

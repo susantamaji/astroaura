@@ -1,12 +1,15 @@
 import React from "react";
 
+// Import your banner image
+import aboutBanner from "../Assets/title-banner.jpg";
+
 export default function AboutHeader() {
   return (
     <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
 
       {/* Background Image */}
       <img
-        src="https://uiparadox.co.uk/templates/astro-aura/assets/media/images/title-banner.jpg"   // <-- change to your actual image name
+        src={aboutBanner}
         alt="About Background"
         className="absolute inset-0 w-full h-full object-cover"
       />

@@ -1,5 +1,8 @@
 import React from "react";
 
+// Import the image properly
+import contactImg from "../Assets/contact-img.jpg";
+
 export default function Form() {
   return (
     <section className="w-full bg-[#1a1a1a] text-white py-20 px-6">
@@ -8,7 +11,7 @@ export default function Form() {
         {/* LEFT IMAGE */}
         <div className="h-full flex justify-center items-center">
           <img
-            src="../src/Assets/contact-img.jpg"
+            src={contactImg}
             alt="Contact"
             className="w-full h-[650px] object-cover rounded-3xl shadow-xl"
           />

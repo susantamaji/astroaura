@@ -1,5 +1,8 @@
 import React from "react";
 
+// Import image properly
+import aboutImg from "../Assets/about-img.png";
+
 export default function AboutCard() {
   return (
     <section className="w-full bg-[#111] text-white py-20 px-6 md:px-16 lg:px-24">
@@ -41,8 +44,8 @@ export default function AboutCard() {
         </div>
 
         {/* RIGHT IMAGE SECTION */}
-        <div className=" w[100%]">
-          <img src="../src/Assets/about-img.png" className="w-full rounded-lg" />
+        <div className="w-full">
+          <img src={aboutImg} className="w-full rounded-lg" />
         </div>
 
       </div>

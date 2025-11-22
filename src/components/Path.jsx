@@ -1,6 +1,9 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 
+// Import the image properly
+import discoverImg from "../Assets/discover-img.jpg";
+
 export default function Path() {
   return (
     <section className="w-full bg-[#141414] text-white py-24 px-6">
@@ -11,7 +14,7 @@ export default function Path() {
           {/* LEFT IMAGE */}
           <div className="overflow-hidden rounded-xl">
             <img
-              src="../src/Assets/discover-img.jpg"  // 🔥 Replace with your image path
+              src={discoverImg}
               alt="cosmic path"
               className="w-full h-full object-cover rounded-xl hover:scale-105 transition duration-500"
             />

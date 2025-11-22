@@ -1,14 +1,21 @@
 import React from "react";
+import hero from "../Assets/hero-icon.png";
+import hero2 from "../Assets/hero-icon2.png";
+import hero3 from "../Assets/hero-icon3.png";
+import aboutimg from "../Assets/about-img.png";
 
 export default function FeatureSection() {
   return (
     <section className="w-full bg-[#141414] text-white py-20 px-6">
+
       {/* TOP 3 FEATURE ICONS */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 text-center mb-20">
+        
+        {/* Card 1 */}
         <div>
           <img
-            src="../src/Assets/hero-icon.png"
-            className="w-20 mx-auto mb-4"
+            src={hero}
+            className="w-20 mx-auto mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]"
           />
           <h3 className="text-xl font-semibold">Privacy</h3>
           <p className="text-gray-400 mt-2">
@@ -16,10 +23,11 @@ export default function FeatureSection() {
           </p>
         </div>
 
+        {/* Card 2 */}
         <div>
           <img
-            src="../src/Assets/hero-icon2.png"
-            className="w-20 mx-auto mb-4"
+            src={hero2}
+            className="w-20 mx-auto mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]"
           />
           <h3 className="text-xl font-semibold">Result Guaranteed</h3>
           <p className="text-gray-400 mt-2">
@@ -27,20 +35,23 @@ export default function FeatureSection() {
           </p>
         </div>
 
+        {/* Card 3 */}
         <div>
           <img
-            src="../src/Assets/hero-icon3.png"
-            className="w-20 mx-auto mb-4"
+            src={hero3}
+            className="w-20 mx-auto mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]"
           />
           <h3 className="text-xl font-semibold">Competence</h3>
           <p className="text-gray-400 mt-2">
             Representing a transformative journey around the world.
           </p>
         </div>
+
       </div>
 
       {/* MAIN DISCOVER SECTION */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+
         {/* LEFT CONTENT */}
         <div>
           <p className="text-yellow-400 mb-3 tracking-wide uppercase">
@@ -76,14 +87,14 @@ export default function FeatureSection() {
           </button>
         </div>
 
-        {/* RIGHT IMAGES */}
+        {/* RIGHT IMAGE */}
         <div className="relative flex justify-center items-center w-full h-[420px] md:h-[520px]">
           <img
-            src="../src/Assets/about-img.png"
-            className="w-[380px] md:w-[520px] lg:w-[620px] 
-             shadow-2xl rounded-xl"
+            src={aboutimg}
+            className="w-[380px] md:w-[520px] lg:w-[620px] shadow-2xl rounded-xl"
           />
         </div>
+
       </div>
     </section>
   );

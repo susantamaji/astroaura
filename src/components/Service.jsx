@@ -1,7 +1,9 @@
 import React from "react";
-import ServicesCard from './ServicesCard';
-import ServicesBlog from './ServicesBlog';
+import ServicesCard from "./ServicesCard";
+import ServicesBlog from "./ServicesBlog";
 
+// Import your banner image correctly
+import servicesBanner from "../Assets/title-banner.jpg";
 
 export default function Service() {
   return (
@@ -10,7 +12,7 @@ export default function Service() {
 
         {/* Background Image */}
         <img
-          src="https://uiparadox.co.uk/templates/astro-aura/assets/media/images/title-banner.jpg"
+          src={servicesBanner}
           alt="Services Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -25,9 +27,9 @@ export default function Service() {
           </h1>
         </div>
       </div>
-      < ServicesCard />
-      <ServicesBlog/>
+
+      <ServicesCard />
+      <ServicesBlog />
     </section>
-    
   );
 }

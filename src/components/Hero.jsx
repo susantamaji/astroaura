@@ -1,4 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import img from ".././Assets/hero-img.png";
+import student1 from "../Assets/student-1.png";
+import student2 from "../Assets/student-2.png";
+import student3 from "../Assets/student-3.png";
+import student4 from "../Assets/student-4.png";
 
 export default function Hero() {
   return (
@@ -22,28 +28,28 @@ export default function Hero() {
               Get Started →
             </button>
 
-            <button className="border border-gray-300 px-8 py-3 rounded-md hover:bg-white hover:text-black transition font-medium cursor-pointer">
+           <NavLink to={"/contact"}> <button className="border border-gray-300 px-8 py-3 rounded-md hover:bg-white hover:text-black transition font-medium cursor-pointer">
               Contact Us
-            </button>
+            </button> </NavLink>
           </div>
 
           {/* CLIENTS */}
           <div className="flex items-center gap-4 mt-10">
             <div className="flex -space-x-3">
               <img
-                src="../src/Assets/student-1.png"
+                src={student1}
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="../src/Assets/student-2.png"
+                src={student2}
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="../src/Assets/student-3.png"
+                src={student3}
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="../src/Assets/student-4.png"
+                src={student4}
                 className="w-10 h-10 rounded-full border border-white"
               />
             </div>
@@ -56,7 +62,7 @@ export default function Hero() {
 
         {/* RIGHT IMAGE GRID */}
         <div className=" w[100%]">
-          <img src="../src/Assets/hero-img.png" className="w-full rounded-lg" />
+          <img src={img} className="w-full rounded-lg" />
         </div>
       </div>
     </section>

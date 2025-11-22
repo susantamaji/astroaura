@@ -1,5 +1,8 @@
 import React from "react";
 
+// Import your local banner image
+import blogBanner from "../Assets/title-banner.jpg";
+
 export default function BlogHeader() {
   return (
     <section className="w-full bg-[#0d0d0d] py-10">
@@ -7,7 +10,7 @@ export default function BlogHeader() {
 
         {/* Background Image */}
         <img
-          src="https://uiparadox.co.uk/templates/astro-aura/assets/media/images/title-banner.jpg"
+          src={blogBanner}
           alt="Blogs Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
